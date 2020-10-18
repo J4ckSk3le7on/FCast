@@ -21,6 +21,9 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  injectable: ^1.0.5
+  get_it: 4.0.4
+  freezed_annotation: ^0.12.0
   flutter:
     sdk: flutter
 
@@ -30,6 +33,10 @@ dependencies:
   cupertino_icons: ^1.0.0
 
 dev_dependencies:
+  injectable_generator: ^1.0.6
+  build_runner: ^1.10.3
+  freezed: ^0.12.2
+  json_serializable: ^3.5.0
   flutter_test:
     sdk: flutter
 
