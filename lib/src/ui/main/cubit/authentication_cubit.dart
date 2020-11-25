@@ -10,7 +10,9 @@ part 'authorization_state.dart';
 class AuthenticationCubit extends Cubit<AuthenticationState> {
   final AuthService authService;
 
-  AuthenticationCubit(this.authService) : super(AuthenticationState.loading());
+  AuthenticationCubit(this.authService) : super(AuthenticationState.loading()) {
+    initAuth();
+  }
 
   Future<void> initAuth() async {
     var isSignedIn = await authService.isSignedIn();
