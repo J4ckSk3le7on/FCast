@@ -32,6 +32,7 @@
 /build/
 *.g.dart
 *.freezed.dart
+*config.dart
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -41,3 +42,7 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+#firebase
+google-services.json
+GoogleService-Info.plist
