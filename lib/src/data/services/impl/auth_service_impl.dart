@@ -27,4 +27,13 @@ class AuthServiceImpl implements AuthService {
     var user = await authRepository.getUser();
     return user != null;
   }
+
+  @override
+  Future<bool> signInWithGoogle() => authRepository.signInWithGoogle();
+
+  @override
+  Future<bool> signInWithApple() => authRepository.signInWithApple();
+
+  @override
+  Future<void> signOut() => authRepository.signOut();
 }

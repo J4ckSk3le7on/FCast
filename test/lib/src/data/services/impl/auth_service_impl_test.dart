@@ -130,4 +130,72 @@ void main() {
       expect(result, true);
     });
   });
+
+  group("Sign in with apple", () {
+    test("When sign in with apple returns true, true is returned", () async {
+      //arrange
+      when(mockAuthRepository.signInWithApple())
+          .thenAnswer((realInvocation) => Future.value(true));
+
+      //act
+      var result = await authServiceImpl.signInWithApple();
+
+      //assert
+      expect(result, true);
+      verify(mockAuthRepository.signInWithApple()).called(1);
+    });
+
+    test("When sign in with apple returns false, false is returned", () async {
+      //arrange
+      when(mockAuthRepository.signInWithApple())
+          .thenAnswer((realInvocation) => Future.value(false));
+
+      //act
+      var result = await authServiceImpl.signInWithApple();
+
+      //assert
+      expect(result, false);
+      verify(mockAuthRepository.signInWithApple()).called(1);
+    });
+  });
+
+  group("Sign in with google", () {
+    test("when sign in with google returns true, true is returned", () async {
+      //arrange
+      when(mockAuthRepository.signInWithGoogle())
+          .thenAnswer((realInvocation) => Future.value(true));
+
+      //act
+      var result = await authServiceImpl.signInWithGoogle();
+
+      //assert
+      expect(result, true);
+      verify(mockAuthRepository.signInWithGoogle()).called(1);
+    });
+
+    test("when sign in with google returns false, false is returned", () async {
+      //arrange
+      when(mockAuthRepository.signInWithGoogle())
+          .thenAnswer((realInvocation) => Future.value(false));
+
+      //act
+      var result = await authServiceImpl.signInWithGoogle();
+
+      //assert
+      expect(result, false);
+      verify(mockAuthRepository.signInWithGoogle()).called(1);
+    });
+  });
+
+  group("Sign out", () {
+    test("When sign out is called, it's passed to the repo", () async {
+      //arrange
+
+      //act
+      await mockAuthRepository.signOut();
+
+      //assert
+      verify(mockAuthRepository.signOut()).called(1);
+    });
+  });
 }

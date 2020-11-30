@@ -23,7 +23,44 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
     }
   }
 
-  Future<void> signedIn() async {
+  Future<void> _signedIn() async {
     emit(AuthenticationState.signedIn());
+  }
+
+  Future<bool> signInWithEmail(String email, String password) async {
+    var result = await authService.signInWithEmailAndPassword(email, password);
+    if (result) {
+      _signedIn();
+    }
+    return result;
+  }
+
+  Future<bool> registerWithEmail(
+      String email, String password, String confirmPassword) async {
+    var result = await authService.registerUserWithEmailAndPassword(
+        email, password, confirmPassword);
+    if (result) {
+      _signedIn();
+    }
+    return result;
+  }
+
+  Future<void> signInWithGoogle() async {
+    var result = await authService.signInWithGoogle();
+    if (result) {
+      _signedIn();
+    }
+  }
+
+  Future<void> signInWithApple() async {
+    var result = await authService.signInWithApple();
+    if (result) {
+      _signedIn();
+    }
+  }
+
+  Future<void> signOut() async {
+    await authService.signOut();
+    emit(AuthenticationState.signedOut());
   }
 }
