@@ -2,6 +2,7 @@ import 'package:f_cast/src/ui/common/ui/splash_screen.dart';
 import 'package:f_cast/src/ui/home/widgets/home.dart';
 import 'package:f_cast/src/ui/login/ui/authentication_page.dart';
 import 'package:f_cast/src/ui/main/cubit/authentication_cubit.dart';
+import 'package:f_cast/src/ui/onboarding/ui/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,6 +20,7 @@ class AuthenticationRouterDelegate extends RouterDelegate<AuthenticationState>
       loading: () => pages.add(SplashPage()),
       signedOut: () => pages.add(AuthenticationPage()),
       signedIn: () => pages.add(HomePage()),
+      onboarding: () => pages.add(OnboardingPage()),
     );
     return pages;
   }

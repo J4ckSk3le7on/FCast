@@ -6,4 +6,5 @@ abstract class AuthService {
   Future<bool> signInWithApple();
   Future<bool> isSignedIn();
   Future<void> signOut();
+  Future<String> getEmail();
 }

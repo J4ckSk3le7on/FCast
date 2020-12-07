@@ -36,4 +36,10 @@ class AuthServiceImpl implements AuthService {
 
   @override
   Future<void> signOut() => authRepository.signOut();
+
+  @override
+  Future<String> getEmail() async {
+    var currentUser = await authRepository.getUser();
+    return currentUser.email;
+  }
 }
