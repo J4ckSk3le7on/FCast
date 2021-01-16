@@ -8,7 +8,7 @@ part 'podcast.g.dart';
 @freezed
 abstract class Podcast with _$Podcast {
   factory Podcast(
-    String id,
+    @nullable String id,
     String type,
     String image,
     String title,
@@ -18,6 +18,7 @@ abstract class Podcast with _$Podcast {
     String language,
     List<int> genreIds,
     String thumbnail,
+    String description,
   ) = _Podcast;
 
   factory Podcast.fromJson(Map<String, dynamic> json) =>

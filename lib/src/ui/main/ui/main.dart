@@ -20,6 +20,8 @@ class Main extends StatelessWidget {
       buttonColor: Color(0xff734B5E),
     ),
     iconTheme: IconThemeData(color: Colors.white),
+    cardColor: Color(0xff598392),
+    bottomAppBarColor: Color(0xff598392),
     textTheme: GoogleFonts.latoTextTheme(
       TextTheme(
         headline1: TextStyle(color: textColor, fontSize: 42),
@@ -49,7 +51,6 @@ class Main extends StatelessWidget {
     if (Platform.isIOS) {
       return Theme(
         data: themeData,
-        isMaterialAppTheme: true,
         child: CupertinoApp.router(
           localizationsDelegates: [
             DefaultMaterialLocalizations.delegate,
