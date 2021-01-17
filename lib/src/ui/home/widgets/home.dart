@@ -1,5 +1,6 @@
 import 'package:f_cast/src/ui/common/ui/platform_page.dart';
 import 'package:f_cast/src/ui/home/home/ui/home_page.dart';
+import 'package:f_cast/src/ui/home/search/ui/search_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,12 +20,12 @@ class _HomeState extends State<Home> {
 
   List<BottomNavigationBarItem> _getNavigationItems = [
     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home 2"),
+    BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
   ];
 
   List<Widget> _pages = [
     PodcastHomePage(),
-    PodcastHomePage(),
+    SearchPage(),
   ];
 
   Widget tabBuilder(BuildContext context, int index) {
