@@ -41,7 +41,7 @@ void main() {
       expect(result, successPodcastResponse);
     });
 
-    test("When get request fails, null is returned", () async {
+    test("When get request fails, empty results is returned", () async {
       //arrange
       when(mockResponse.statusCode).thenReturn(400);
 
@@ -49,10 +49,10 @@ void main() {
       var result = await curatedPodcastRepository.getCuratedPodcasts();
 
       //assert
-      expect(result, null);
+      expect(result, CuratedPodcasts([]));
     });
 
-    test("When dio throws an error, null is returned", () async {
+    test("When dio throws an error, empty results is returned", () async {
       //arrange
       when(mockDio.get(any)).thenThrow(DioError());
 
@@ -60,7 +60,7 @@ void main() {
       var result = await curatedPodcastRepository.getCuratedPodcasts();
 
       //assert
-      expect(result, null);
+      expect(result, CuratedPodcasts([]));
     });
   });
 }
