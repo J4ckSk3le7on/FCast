@@ -1,16 +1,11 @@
 # f_cast
 
-A Flutter Podcast Application
+Build Status:
+[![Build Status](https://app.bitrise.io/app/ba485ef4c18beb98/status.svg?token=e4crkxZuSZT90oZinQikyA&branch=master)](https://app.bitrise.io/app/ba485ef4c18beb98)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Welcome to F Cast, a simple podcast player build using flutter. 
 
-A few resources to get you started if this is your first Flutter project:
+Want to follow along development? Go to [My Blog](https://whitewhiskywolf.com/) and subscribe!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Have a problem? Submit an issue and I'll take a look!
