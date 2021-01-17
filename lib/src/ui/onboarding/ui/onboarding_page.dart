@@ -1,4 +1,4 @@
-import 'package:f_cast/src/data/model/api/search_results.dart';
+import 'package:f_cast/src/data/model/api/search/search_results.dart';
 import 'package:f_cast/src/ui/common/ui/loading_widget.dart';
 import 'package:f_cast/src/ui/common/ui/platform_page.dart';
 import 'package:f_cast/src/ui/common/ui/platform_scaffold.dart';

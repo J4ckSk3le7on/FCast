@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:f_cast/src/data/model/api/curated_podcasts.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/curated_podcasts.dart';
 import 'package:f_cast/src/data/services/impl/curated_podcast_service.dart';
 import 'package:f_cast/src/ui/home/home/cubit/home_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';

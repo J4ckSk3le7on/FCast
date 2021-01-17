@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:f_cast/src/data/model/api/curated_podcasts.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/curated_podcasts.dart';
 import 'package:f_cast/src/ui/home/home/cubit/home_cubit.dart';
 import 'package:f_cast/src/ui/home/home/ui/podcast_card.dart';
 import 'package:flutter/cupertino.dart';

@@ -1,4 +1,4 @@
-import 'package:f_cast/src/data/model/api/podcast_curated.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/podcast_curated.dart';
 import 'package:flutter/material.dart';
 
 class PodcastCard extends StatelessWidget {

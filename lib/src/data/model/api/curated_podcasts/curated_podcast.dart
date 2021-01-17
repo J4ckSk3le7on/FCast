@@ -1,7 +1,5 @@
-import 'package:f_cast/src/data/model/api/podcast_curated.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/podcast_curated.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../models/podcast.dart';
 
 part 'curated_podcast.freezed.dart';
 part 'curated_podcast.g.dart';

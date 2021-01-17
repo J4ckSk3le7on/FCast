@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:f_cast/src/data/model/api/curated_podcasts.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/curated_podcasts.dart';
 import 'package:f_cast/src/domain/repositories/remote/impl/curated_podcast_repository.dart';
 import 'package:f_cast/src/injectible/modules/dio_module.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:f_cast/src/data/model/api/curated_podcasts.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/curated_podcasts.dart';
 import 'package:f_cast/src/extensions/results_extension.dart';
 import 'package:injectable/injectable.dart';
 
@@ -16,13 +16,13 @@ class CuratedPodcastRepository {
     try {
       var response = await _dio.get(_uriPath);
       if (!response.isSuccessful()) {
-        return null;
+        return CuratedPodcasts([]);
       }
       var data = response.data as Map<String, dynamic>;
       return CuratedPodcasts.fromJson(data);
     } catch (e) {
       print(e);
     }
-    return null;
+    return CuratedPodcasts([]);
   }
 }

@@ -1,4 +1,4 @@
-import 'package:f_cast/src/data/model/api/curated_podcasts.dart';
+import 'package:f_cast/src/data/model/api/curated_podcasts/curated_podcasts.dart';
 import 'package:f_cast/src/data/services/impl/curated_podcast_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

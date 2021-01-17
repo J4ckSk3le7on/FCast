@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:f_cast/src/data/model/api/search_results.dart';
+import 'package:f_cast/src/data/model/api/search/search_results.dart';
 import 'package:f_cast/src/data/services/impl/search_service.dart';
 import 'package:f_cast/src/ui/onboarding/cubit/onboarding_search_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
