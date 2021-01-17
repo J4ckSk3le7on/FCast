@@ -13,15 +13,15 @@ class HomeCubit extends Cubit<HomeState> {
   CuratedPodcasts _podcasts;
 
   HomeCubit(this._curatedPodcastService) : super(HomeState.loading()) {
-    _init();
+    _getPodcasts();
   }
 
   Future<void> refresh() async {
     emit(HomeState.loading());
-    _init();
+    _getPodcasts();
   }
 
-  Future<void> _init() async {
+  Future<void> _getPodcasts() async {
     _podcasts = await _curatedPodcastService.getCuratedPodcasts();
     _emitState();
   }
